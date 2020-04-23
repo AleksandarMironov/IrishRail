@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/tripText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/startStationText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/startStationText"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:background="@color/textBackground"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/firstStationRecycler"
+        app:layout_constraintEnd_toStartOf="@+id/brayStationText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/firstStationRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/recycler_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/rotateBtn"
+        app:layout_constraintEnd_toStartOf="@+id/brayStationRecycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startStationText" />
+
+    <TextView
+        android:id="@+id/firstStationErrText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/firstStationRecycler"
+        app:layout_constraintEnd_toEndOf="@+id/firstStationRecycler"
+        app:layout_constraintTop_toTopOf="@+id/firstStationRecycler"
+        app:layout_constraintBottom_toBottomOf="@+id/firstStationRecycler"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_trains_message" />
+
+    <TextView
+        android:id="@+id/brayStationText"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:background="@color/textBackground"
+        android:gravity="center"
+        android:text="@string/station_bray"
+        app:layout_constraintBottom_toTopOf="@+id/brayStationRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startStationText"
+        app:layout_constraintTop_toTopOf="@+id/startStationText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/brayStationRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/recycler_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/rotateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstStationRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/brayStationText" />
+
+    <TextView
+        android:id="@+id/brayStationErrText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/brayStationRecycler"
+        app:layout_constraintEnd_toEndOf="@+id/brayStationRecycler"
+        app:layout_constraintTop_toTopOf="@+id/brayStationRecycler"
+        app:layout_constraintBottom_toBottomOf="@+id/brayStationRecycler"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_trains_message" />
+
+    <ImageButton
+        android:id="@+id/rotateBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_bottom_margin"
+        android:src="@drawable/ic_rotate_arrows"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/refreshBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/refreshBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_bottom_margin"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotateBtn" />
+
+    <ImageView
+        android:id="@+id/noInternetImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@+id/rotateBtn"
+        app:layout_constraintTop_toTopOf="@+id/rotateBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/rotateBtn"
+        app:layout_constraintEnd_toStartOf="@+id/refreshBtn"
+        android:visibility="gone"
+        android:src="@drawable/ic_no_internet"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

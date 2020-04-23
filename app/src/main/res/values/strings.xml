@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IrishRail</string>
+    <string name="station_bray">Bray</string>
+    <string name="trip">%s -> Bray -> %s</string>
+    <string name="train_code">Train code: %s</string>
+    <string name="destination">Destination: %s</string>
+    <string name="depart">Depart: %s</string>
+    <string name="arrive_at">Arrive at %s: %s</string>
+    <string name="no_trains_message">Sorry, no available trains for the next 90 minutes</string>
+</resources>

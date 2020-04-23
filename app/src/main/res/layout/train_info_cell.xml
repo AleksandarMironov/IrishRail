@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/train_cell_margin_start_end"
+    android:layout_marginTop="@dimen/train_cell_margin_top_bottom"
+    android:layout_marginEnd="@dimen/train_cell_margin_start_end"
+    android:layout_marginBottom="@dimen/train_cell_margin_top_bottom"
+    android:background="@drawable/background_train_info_cell">
+
+    <TextView
+        android:id="@+id/cellTrainCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/train_code"
+        app:layout_constraintBottom_toTopOf="@+id/cellTrainDepartTimeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cellTrainDestinationText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:gravity="center"
+        android:text="@string/destination"
+        app:layout_constraintBottom_toBottomOf="@+id/cellTrainCodeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cellTrainCodeText"
+        app:layout_constraintTop_toTopOf="@+id/cellTrainCodeText" />
+
+    <TextView
+        android:id="@+id/cellTrainDepartTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/depart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cellTrainArriveText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cellTrainDestinationText" />
+
+    <TextView
+        android:id="@+id/cellTrainArriveText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:gravity="center"
+        android:text="@string/arrive_at"
+        app:layout_constraintBottom_toBottomOf="@+id/cellTrainDepartTimeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cellTrainDepartTimeText"
+        app:layout_constraintTop_toTopOf="@+id/cellTrainDepartTimeText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

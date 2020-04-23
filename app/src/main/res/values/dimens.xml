@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_bottom_margin">8dp</dimen>
+    <dimen name="text_margin">8dp</dimen>
+    <dimen name="recycler_margin">8dp</dimen>
+    <dimen name="train_cell_margin_start_end">2dp</dimen>
+    <dimen name="train_cell_margin_top_bottom">4dp</dimen>
+</resources>
